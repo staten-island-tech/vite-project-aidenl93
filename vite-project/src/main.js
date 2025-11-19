@@ -13,7 +13,7 @@ const darkmode = document.querySelector(".darkmode");
 darkmode.addEventListener("click", () => {
   body.style.backgroundColor = "black";
   darkmode.style.visibility = "hidden";
-  document.insertAdjacentHTML("afterbegin", `<button>hey</button>`);
+  document.insertAdjacentHTML();
 });
 /* 
 make Array
