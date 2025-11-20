@@ -17,10 +17,10 @@ darkmode.addEventListener("click", () => {
 lightmode.addEventListener("click", () => {
   body.style.backgroundColor = "white";
 });
-const subbutton = document.querySelector(".subbutton")
-subbutton.addEventListener("submit", () => ) {
-  console.log("hi")
-}
+const subbutton = document.querySelector(".subbutton");
+subbutton.addEventListener("click", () => {
+  console.log("hi");
+});
 /* 
 make Array
 inject songs for each item in the Array */
