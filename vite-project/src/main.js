@@ -9,12 +9,18 @@ function inject(item) {
     `);
 }
 const body = document.querySelector(".body");
+const lightmode = document.querySelector(".lightmode");
 const darkmode = document.querySelector(".darkmode");
 darkmode.addEventListener("click", () => {
   body.style.backgroundColor = "black";
-  darkmode.style.visibility = "hidden";
-  document.insertAdjacentHTML();
 });
+lightmode.addEventListener("click", () => {
+  body.style.backgroundColor = "white";
+});
+const subbutton = document.querySelector(".subbutton")
+subbutton.addEventListener("submit", () => ) {
+  console.log("hi")
+}
 /* 
 make Array
 inject songs for each item in the Array */
