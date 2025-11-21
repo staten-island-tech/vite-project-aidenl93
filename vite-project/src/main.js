@@ -8,6 +8,7 @@ function inject(item) {
     
     `);
 }
+const textbox = document.querySelector(".textbox");
 const body = document.querySelector(".body");
 const lightmode = document.querySelector(".lightmode");
 const darkmode = document.querySelector(".darkmode");
@@ -19,7 +20,7 @@ lightmode.addEventListener("click", () => {
 });
 const subbutton = document.querySelector(".subbutton");
 subbutton.addEventListener("click", () => {
-  console.log("hi");
+  console.log(textbox.textContent);
 });
 /* 
 make Array
