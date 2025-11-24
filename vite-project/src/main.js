@@ -20,7 +20,7 @@ lightmode.addEventListener("click", () => {
 });
 const subbutton = document.querySelector(".subbutton");
 subbutton.addEventListener("click", () => {
-  console.log(textbox.textContent);
+  console.log(textbox);
 });
 /* 
 make Array
