@@ -1,5 +1,50 @@
-:root {
+/* :root {
   --primary-color: #252524;
   --secondary-color: #f3f3f3;
   --tertiary-color: #68b687;
+
+  --lprimary-color: #d9d9d9;
+  --lsecondary-color: #009aef;
+  --ltertiary-color: #68b687;
+}
+.dark {
+  --primary: var(--primary-color);
+  --secondary: var(--secondary-color);
+}
+.light {
+  --primary: var(--lprimary-color);
+  --secondary: var(var(--lsecondary-color));
+}
+.body {
+  background-color: var(--primary-color);
+}
+ */
+:root {
+  --light-blue: #252524;
+  --dark-blue: #f3f3f3;
+  --light-red: #d9d9d9;
+  --dark-red: #009aef;
+
+  /* Intentions */
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
+}
+
+.cool {
+  --primary: var(--dark-blue);
+  --secondary: var(--light-blue);
+}
+
+.warm {
+  --primary: var(--light-red);
+  --secondary: var(--dark-red);
+}
+
+.hero {
+  background-color: var(--primary);
+}
+
+.main {
+  background-color: var(--secondary);
+  height: 90vh;
 }
