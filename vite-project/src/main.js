@@ -21,13 +21,12 @@ const songs = [
   { title: "Stolen Dance", artist: "Milky Chance" },
   { title: "Holocene", artist: "Bon Iver" },
 ];
-
 function inject(item) {
-  const container = document.querySelector(".container");
+  const container = document.querySelector(".section");
   container.insertAdjacentHTML(
     "afterbegin",
-    `<h2>song: ${item.title}</h2>
-    <h2>artist: ${item.artist}</h2>`
+    `<div><h2>song: ${item.title}</h2>
+    <h2>artist: ${item.artist}</h2></div>`
   );
 }
 songs.forEach((song) => {

@@ -24,6 +24,7 @@
   --dark-blue: #f3f3f3;
   --light-red: #d9d9d9;
   --dark-red: #009aef;
+  --totally-yellow: #68b687;
 
   /* Intentions */
   --primary: var(--light-blue);
@@ -42,9 +43,10 @@
 
 .hero {
   background-color: var(--primary);
+  text-align: center;
 }
 
-.main {
+body {
   background-color: var(--secondary);
   height: 90vh;
 }
