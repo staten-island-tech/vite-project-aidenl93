@@ -21,12 +21,12 @@ const songs = [
   { title: "Stolen Dance", artist: "Milky Chance" },
   { title: "Holocene", artist: "Bon Iver" },
 ];
+const container = document.querySelector(".section");
 function inject(item) {
-  const container = document.querySelector(".section");
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div><h2>song: ${item.title}</h2>
-    <h2>artist: ${item.artist}</h2></div>`
+    `<div><h2>song: ${item.title} artist: ${item.artist}</h2>
+    </div>`
   );
 }
 songs.forEach((song) => {
@@ -41,6 +41,21 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
+function returnText() {
+  let input = document.getElementById("input").value;
+  container.insertAdjacentHTML("afterbegin", `<h2>${input}</h2>`);
+}
+const submitbutton = document.querySelector(".submitbutton");
+submitbutton.addEventListener("click", function () {
+  returnText();
+});
+function returnImage() {
+  let imginput = document.getElementById("imginput").value;
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `<img src="${imginput}" alt="newimage">`
+  );
+}
 /* 
 make Array
 inject songs for each item in the Array */

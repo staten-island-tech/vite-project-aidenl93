@@ -50,3 +50,6 @@ body {
   background-color: var(--secondary);
   height: 90vh;
 }
+h2 {
+  background-color: var(--primary);
+}
