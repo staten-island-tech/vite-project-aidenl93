@@ -56,6 +56,10 @@ function returnImage() {
     `<img src="${imginput}" alt="newimage">`
   );
 }
+const imgbutton = document.getElementById("imgbutton");
+imgbutton.addEventListener("click", function () {
+  returnImage();
+});
 /* 
 make Array
 inject songs for each item in the Array */
