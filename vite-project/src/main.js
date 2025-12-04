@@ -1,31 +1,36 @@
 import "./style.css";
 const songs = [
-  { title: "Electric Feel", artist: "MGMT" },
-  { title: "Dreams", artist: "Fleetwood Mac" },
-  { title: "Lose Yourself to Dance", artist: "Daft Punk" },
-  { title: "The Less I Know the Better", artist: "Tame Impala" },
-  { title: "Blinding Lights", artist: "The Weeknd" },
-  { title: "Dog Days Are Over", artist: "Florence + The Machine" },
-  { title: "Take Me Out", artist: "Franz Ferdinand" },
-  { title: "Somebody Else", artist: "The 1975" },
-  { title: "Pumped Up Kicks", artist: "Foster the People" },
-  { title: "Adore You", artist: "Harry Styles" },
-  { title: "Paper Planes", artist: "M.I.A." },
-  { title: "Riptide", artist: "Vance Joy" },
-  { title: "Feel Good Inc.", artist: "Gorillaz" },
-  { title: "Midnight City", artist: "M83" },
-  { title: "Bad Habit", artist: "Steve Lacy" },
-  { title: "Clocks", artist: "Coldplay" },
-  { title: "Heat Waves", artist: "Glass Animals" },
-  { title: "Young Folks", artist: "Peter Bjorn and John" },
-  { title: "Stolen Dance", artist: "Milky Chance" },
-  { title: "Holocene", artist: "Bon Iver" },
+  { title: "Electric Feel", artist: "MGMT", genre: "Pop" },
+  { title: "Dreams", artist: "Fleetwood Mac", genre: "Rock" },
+  { title: "Lose Yourself to Dance", artist: "Daft Punk", genre: "Pop" },
+  { title: "The Less I Know the Better", artist: "Tame Impala", genre: "Pop" },
+  { title: "Blinding Lights", artist: "The Weeknd", genre: "Pop" },
+  {
+    title: "Dog Days Are Over",
+    artist: "Florence + The Machine",
+    genre: "Pop",
+  },
+  { title: "Take Me Out", artist: "Franz Ferdinand", genre: "Rock" },
+  { title: "Somebody Else", artist: "The 1975", genre: "Pop" },
+  { title: "Pumped Up Kicks", artist: "Foster the People", genre: "Pop" },
+  { title: "Adore You", artist: "Harry Styles", genre: "Pop" },
+  { title: "Paper Planes", artist: "M.I.A.", genre: "Hip Hop" },
+  { title: "Riptide", artist: "Vance Joy", genre: "Pop" },
+  { title: "Feel Good Inc.", artist: "Gorillaz", genre: "Hip Hop" },
+  { title: "Midnight City", artist: "M83", genre: "Pop" },
+  { title: "Bad Habit", artist: "Steve Lacy", genre: "Alternative" },
+  { title: "Clocks", artist: "Coldplay", genre: "Alternative" },
+  { title: "Heat Waves", artist: "Glass Animals", genre: "Indie Pop" },
+  { title: "Young Folks", artist: "Peter Bjorn and John", genre: "Indie Pop" },
+  { title: "Stolen Dance", artist: "Milky Chance", genre: "Indie Folk" },
+  { title: "Holocene", artist: "Bon Iver", genre: "Indie Folk" },
 ];
 const container = document.querySelector(".section");
 function inject(item) {
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div><h2>song: ${item.title} artist: ${item.artist}</h2>
+    `<div class=songtitles><h3>song: ${item.title} </h3>
+      <h3>artist: ${item.artist}</h3>
     </div>`
   );
 }
@@ -41,21 +46,20 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
-function returnText() {
+function returnImageANDTEXT() {
+  let imginput = document.getElementById("imginput").value;
   let input = document.getElementById("input").value;
-  container.insertAdjacentHTML("afterbegin", `<h2>${input}</h2>`);
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class=songtitles><h2>${input}</h2>
+    <img src="${imginput}" alt="newimage"></div>`
+  );
 }
 const submitbutton = document.querySelector(".submitbutton");
 submitbutton.addEventListener("click", function () {
-  returnText();
+  returnImageANDTEXT();
 });
-function returnImage() {
-  let imginput = document.getElementById("imginput").value;
-  container.insertAdjacentHTML(
-    "afterbegin",
-    `<img src="${imginput}" alt="newimage">`
-  );
-}
+
 const imgbutton = document.getElementById("imgbutton");
 imgbutton.addEventListener("click", function () {
   returnImage();
