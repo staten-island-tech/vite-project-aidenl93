@@ -49,9 +49,11 @@ document.querySelector(".btn").addEventListener("click", function () {
 function createSong() {
   let imginput = document.getElementById("imginput").value;
   let input = document.getElementById("input").value;
+  let ainput = document.getElementById("ainput").value;
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div class=songtitles><h2>${input}</h2>
+    `<div class=songtitles><h2>song: ${input}</h2>
+      <h2>artist: ${ainput}</h2>
     <img src="${imginput}" alt="newimage"></div>`
   );
 }
@@ -72,7 +74,42 @@ steph.addEventListener("click", function () {
 });
 const audioPlayer = document.getElementById("myAudio");
 //i finished the steph shrine
+const filterTypes = [
+  "All",
+  "Indie Folk",
+  "Indie Pop",
+  "Alternative",
+  "Pop",
+  "Hip Hop",
+  "Rock",
+];
+const filter = document.querySelector(".filter");
 
+filterTypes.forEach((type) => {
+  filter.insertAdjacentHTML(
+    "beforeend",
+    `<button class="filter-btn" data-type="${type}">${type}</button>`
+  );
+});
+function filterItems(type) {
+  container.innerHTML = "";
+  let filtered = songs;
+  if (type !== "all") filtered = songs.filter((item) => item.genre === type);
+  filtered.forEach((item) => inject(item));
+  if (type === "All") {
+    songs.forEach((song) => {
+      inject(song);
+    });
+  }
+}
+
+const filterBtns = document.querySelectorAll(".filter-btn");
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const type = btn.getAttribute("data-type");
+    filterItems(type);
+  });
+});
 /* 
 make Array
 inject songs for each item in the Array */
