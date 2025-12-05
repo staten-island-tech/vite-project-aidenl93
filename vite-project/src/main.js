@@ -46,7 +46,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
-function returnImageANDTEXT() {
+function createSong() {
   let imginput = document.getElementById("imginput").value;
   let input = document.getElementById("input").value;
   container.insertAdjacentHTML(
@@ -57,12 +57,7 @@ function returnImageANDTEXT() {
 }
 const submitbutton = document.querySelector(".submitbutton");
 submitbutton.addEventListener("click", function () {
-  returnImageANDTEXT();
-});
-
-const imgbutton = document.getElementById("imgbutton");
-imgbutton.addEventListener("click", function () {
-  returnImage();
+  createSong();
 });
 
 // stephen curry shrine
