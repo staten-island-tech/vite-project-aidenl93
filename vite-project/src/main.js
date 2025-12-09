@@ -50,12 +50,16 @@ function createSong() {
   let imginput = document.getElementById("imginput").value;
   let input = document.getElementById("input").value;
   let ainput = document.getElementById("ainput").value;
-  container.insertAdjacentHTML(
-    "afterbegin",
-    `<div class=songtitles><h2>song: ${input}</h2>
+  if (imginput === "" || ainput === "" || input === "") {
+    alert("bro ur missing something");
+  } else {
+    container.insertAdjacentHTML(
+      "afterbegin",
+      `<div class=songtitles><h2>song: ${input}</h2>
       <h2>artist: ${ainput}</h2>
     <img src="${imginput}" alt="newimage"></div>`
-  );
+    );
+  }
 }
 const submitbutton = document.querySelector(".submitbutton");
 submitbutton.addEventListener("click", function () {

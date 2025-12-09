@@ -49,14 +49,16 @@
 body {
   background-color: var(--secondary);
   height: 90vh;
+  font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
 }
-h2 {
-  background-color: var(--primary);
-}
+
 .songtitles {
   background-color: var(--primary);
 }
 .submitbutton {
+  font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
   display: inline-block;
   outline: 0;
   border: 0;
@@ -88,4 +90,7 @@ h2 {
     box-shadow: none;
     border-color: rgb(100, 153, 255);
   }
+}
+.songtitles {
+  text-align: center;
 }
