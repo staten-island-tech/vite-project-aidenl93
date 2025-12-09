@@ -31,9 +31,11 @@ function inject(item) {
     "afterbegin",
     `<div class=songtitles><h3>song: ${item.title} </h3>
       <h3>artist: ${item.artist}</h3>
+      <button class="playlistadd">add to playlist</button>
     </div>`
   );
 }
+
 songs.forEach((song) => {
   inject(song);
 });
@@ -46,6 +48,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
+
 function createSong() {
   let imginput = document.getElementById("imginput").value;
   let input = document.getElementById("input").value;
@@ -59,6 +62,13 @@ function createSong() {
       <h2>artist: ${ainput}</h2>
     <img src="${imginput}" alt="newimage"></div>`
     );
+
+    const yoursongs = {
+      title: input,
+      artist: ainput,
+      genre: "Your Song",
+    };
+    songs.push(yoursongs);
   }
 }
 const submitbutton = document.querySelector(".submitbutton");
@@ -86,6 +96,7 @@ const filterTypes = [
   "Pop",
   "Hip Hop",
   "Rock",
+  "Your Song",
 ];
 const filter = document.querySelector(".filter");
 
@@ -101,6 +112,11 @@ function filterItems(type) {
   if (type !== "all") filtered = songs.filter((item) => item.genre === type);
   filtered.forEach((item) => inject(item));
   if (type === "All") {
+    songs.forEach((song) => {
+      inject(song);
+    });
+  }
+  if (type === "Your Songs") {
     songs.forEach((song) => {
       inject(song);
     });
