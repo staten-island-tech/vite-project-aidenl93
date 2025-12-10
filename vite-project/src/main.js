@@ -31,7 +31,6 @@ function inject(item) {
     "afterbegin",
     `<div class=songtitles><h3>song: ${item.title} </h3>
       <h3>artist: ${item.artist}</h3>
-      <button class="playlistadd">add to playlist</button>
     </div>`
   );
 }
