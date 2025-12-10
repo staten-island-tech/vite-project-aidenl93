@@ -29,8 +29,9 @@ const container = document.querySelector(".section");
 function inject(item) {
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div class=songtitles><h3>song: ${item.title} </h3>
-      <h3>artist: ${item.artist}</h3>
+    `<div class=songtitles><h2>song: ${item.title} </h2 >
+      <h2>artist: ${item.artist}</h2>
+      <img class="album"src="https://th.bing.com/th/id/OIP.RZg3Ra7UGsaNQLWlLN3_qwHaE5?w=266&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="newimage"></div>
     </div>`
   );
 }
@@ -59,7 +60,8 @@ function createSong() {
       "afterbegin",
       `<div class=songtitles><h2>song: ${input}</h2>
       <h2>artist: ${ainput}</h2>
-    <img src="${imginput}" alt="newimage"></div>`
+    <img class="album" src="${imginput}" alt="newimage"></div>
+    `
     );
 
     const yoursongs = {
@@ -129,6 +131,7 @@ filterBtns.forEach((btn) => {
     filterItems(type);
   });
 });
+
 /* 
 make Array
 inject songs for each item in the Array */
