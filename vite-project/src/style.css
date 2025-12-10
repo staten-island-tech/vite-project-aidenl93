@@ -1,96 +1,178 @@
-/* :root {
-  --primary-color: #252524;
-  --secondary-color: #f3f3f3;
-  --tertiary-color: #68b687;
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@300;500;700&display=swap");
 
-  --lprimary-color: #d9d9d9;
-  --lsecondary-color: #009aef;
-  --ltertiary-color: #68b687;
-}
-.dark {
-  --primary: var(--primary-color);
-  --secondary: var(--secondary-color);
-}
-.light {
-  --primary: var(--lprimary-color);
-  --secondary: var(var(--lsecondary-color));
-}
-.body {
-  background-color: var(--primary-color);
-}
- */
-:root {
-  --light-blue: #252524;
-  --dark-blue: #f3f3f3;
-  --light-red: #d9d9d9;
-  --dark-red: #009aef;
-  --totally-yellow: #68b687;
-
-  /* Intentions */
-  --primary: var(--light-blue);
-  --secondary: var(--dark-blue);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Bitcount Prop Single", sans-serif;
+  transition: background 0.4s, color 0.4s;
 }
 
-.cool {
-  --primary: var(--dark-blue);
-  --secondary: var(--light-blue);
+/* Light Mode (cool) */
+body.cool {
+  background: #f2f6ff;
+  color: #1a1a1a;
 }
 
-.warm {
-  --primary: var(--light-red);
-  --secondary: var(--dark-red);
+/* Warm Mode */
+body.warm {
+  background: #311b0b;
+  color: #ffe7c7;
 }
 
 .hero {
-  background-color: var(--primary);
   text-align: center;
-}
-
-body {
-  background-color: var(--secondary);
-  height: 90vh;
-  font-family: "Bitcount Prop Single", system-ui;
-  font-optical-sizing: auto;
-}
-
-.songtitles {
-  background-color: var(--primary);
-}
-.submitbutton {
-  font-family: "Bitcount Prop Single", system-ui;
-  font-optical-sizing: auto;
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  background: #000000;
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 14px 24px 16px;
-  font-size: 18px;
+  font-size: 4rem;
+  margin: 20px 0;
   font-weight: 700;
-  line-height: 1;
-  transition: transform 200ms, background 200ms;
-  :hover {
-    transform: translateY(-2px);
-  }
+  letter-spacing: 4px;
 }
+
+.main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Switch Theme Button */
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #4c7fff;
+  color: white;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Inputs */
 .inputsongs {
-  padding: 6px 12px;
-  background: rgb(31, 32, 35);
-  border: 1px solid rgb(60, 63, 68);
-  border-radius: 4px;
-  font-size: 13px;
-  color: rgb(247, 248, 248);
-  height: 46px;
-  appearance: none;
-  transition: border 0.15s ease 0s;
-  :focus {
-    outline: none;
-    box-shadow: none;
-    border-color: rgb(100, 153, 255);
-  }
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: 0.2s;
 }
+
+.inputsongs:focus {
+  border-color: #4c7fff;
+  box-shadow: 0 0 5px #4c7fff;
+}
+
+/* Add Song Button */
+.submitbutton {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #47b36a;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submitbutton:hover {
+  transform: scale(1.05);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .songtitles {
-  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: 0.2s;
+}
+
+body.warm .songtitles {
+  background: rgba(60, 35, 15, 0.4);
+  border: 2px solid rgba(255, 230, 200, 0.25);
+}
+
+.songtitles:hover {
+  transform: translateY(-4px);
+}
+
+.songtitles h2 {
+  margin: 5px 0;
+}
+
+/* Album Art */
+.album {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border: none;
+  background: #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  background: #4c7fff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/*       holy aiden tuff steph curry shrine pat spencer is good too      */
+
+#steph {
+  padding: 12px;
+  background: gold;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#steph:hover {
+  transform: scale(1.1);
+}
+
+.stephencurry img {
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    font-size: 2.7rem;
+  }
+
+  .album {
+    width: 150px;
+    height: 150px;
+  }
 }
