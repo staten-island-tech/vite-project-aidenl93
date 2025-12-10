@@ -60,7 +60,7 @@ function createSong() {
       "afterbegin",
       `<div class=songtitles><h2>song: ${input}</h2>
       <h2>artist: ${ainput}</h2>
-    <img class="album" src="${imginput}" alt="newimage"></div>
+    <img class="album" src="${imginput}" alt="missing image!"></div>
     `
     );
 
